@@ -34,6 +34,7 @@ This project develops yield forecasting and damage assessment models for extensi
   ```
 
 ## Directory Structure
+```bash
 yield_project/
 ├── data/
 │   ├── raw/                  # Satellite imagery 
@@ -45,7 +46,8 @@ yield_project/
 ├── src/                      # Scripts for preprocessing, modeling, quantification
 ├── requirements.txt          
 ├── environment.yml           
-└── README.md                 
+└── README.md
+```                 
 
 ## Usage
 1. Add satelite imagery to data/raw/.
@@ -117,3 +119,9 @@ yield_project/
   ```
 
 ## D.
+- Band Scaling: COPERNICUS/S2_HARMONIZED data is scaled by 10,000, so .divide(10000) in mask_s2_clouds ensures reflectance values are 0–1, consistent with NDVI calculation.
+- Cloud Masking: The mask_s2_clouds function uses QA60 to mask clouds and cirrus, ensuring cleaner imagery for your analysis (e.g., detecting wind damage in bright green vs. dark green areas).
+- Harmonization: The HARMONIZED collection adjusts DN values post-2022 to match pre-2022 ranges, ensuring consistency for the 2025 data.
+- GEE Quotas: Monitor quotas in the Google Cloud Console for yield-project-2025 to avoid limits. Reduce maxPixels or refine roi if exports fail.
+
+
