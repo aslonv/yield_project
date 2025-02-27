@@ -34,6 +34,7 @@ This project develops yield forecasting and damage assessment models for extensi
   ```
 
 ## Directory Structure
+```bash
 yield_project/
 ├── data/
 │   ├── raw/                  # Satellite imagery 
@@ -45,7 +46,8 @@ yield_project/
 ├── src/                      # Scripts for preprocessing, modeling, quantification
 ├── requirements.txt          
 ├── environment.yml           
-└── README.md                 
+└── README.md
+```                 
 
 ## Usage
 1. Add satelite imagery to data/raw/.
