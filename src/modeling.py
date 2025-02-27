@@ -35,7 +35,7 @@ def supervised_classification(features, labels):
     return rf
 
 if __name__ == "__main__":
-    # Example usage (replace with actual data paths and labels)
+    # Replace with actual data paths and labels)
     pre_ndvi, pre_texture = np.random.rand(100, 100), np.random.rand(100, 100)  # Placeholder
     post_ndvi, post_texture = np.random.rand(100, 100), np.random.rand(100, 100)  # Placeholder
     features = np.stack([pre_ndvi, post_ndvi, pre_texture, post_texture], axis=-1)
