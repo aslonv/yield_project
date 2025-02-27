@@ -3,7 +3,7 @@ import rasterio
 import numpy as np
 
 # Initialize Earth Engine with the project id
-ee.Initialize(project='yield-project-2025')
+ee.Initialize(project='insert-your-project-id')
 
 roi = ee.Geometry.Rectangle([-122.4194, 37.7749, -122.4184, 37.7759])  
 def mask_s2_clouds(image):
